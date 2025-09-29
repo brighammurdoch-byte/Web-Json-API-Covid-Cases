@@ -1,0 +1,66 @@
+from State import State
+
+#State info
+state_data = [
+    {"state_code": "al", "state_name": "Alabama"},
+    {"state_code": "ar", "state_name": "Arkansas"},
+    {"state_code": "as", "state_name": "American Samoa"},
+    {"state_code": "az", "state_name": "Arizona"},
+    {"state_code": "ca", "state_name": "California"},
+    {"state_code": "co", "state_name": "Colorado"},
+    {"state_code": "ct", "state_name": "Connecticut"},
+    {"state_code": "dc", "state_name": "District of Columbia"},
+    {"state_code": "de", "state_name": "Delaware"},
+    {"state_code": "fl", "state_name": "Florida"},
+    {"state_code": "ga", "state_name": "Georgia"},
+    {"state_code": "gu", "state_name": "Guam"},
+    {"state_code": "hi", "state_name": "Hawaii"},
+    {"state_code": "ia", "state_name": "Iowa"},
+    {"state_code": "id", "state_name": "Idaho"},
+    {"state_code": "il", "state_name": "Illinois"},
+    {"state_code": "in", "state_name": "Indiana"},
+    {"state_code": "ks", "state_name": "Kansas"},
+    {"state_code": "ky", "state_name": "Kentucky"},
+    {"state_code": "la", "state_name": "Louisiana"},
+    {"state_code": "ma", "state_name": "Massachusetts"},
+    {"state_code": "md", "state_name": "Maryland"},
+    {"state_code": "me", "state_name": "Maine"},
+    {"state_code": "mi", "state_name": "Michigan"},
+    {"state_code": "mn", "state_name": "Minnesota"},
+    {"state_code": "mo", "state_name": "Missouri"},
+    {"state_code": "mp", "state_name": "Northern Mariana Islands"},
+    {"state_code": "ms", "state_name": "Mississippi"},
+    {"state_code": "mt", "state_name": "Montana"},
+    {"state_code": "nc", "state_name": "North Carolina"},
+    {"state_code": "nd", "state_name": "North Dakota"},
+    {"state_code": "ne", "state_name": "Nebraska"},
+    {"state_code": "nh", "state_name": "New Hampshire"},
+    {"state_code": "nj", "state_name": "New Jersey"},
+    {"state_code": "nm", "state_name": "New Mexico"},
+    {"state_code": "nv", "state_name": "Nevada"},
+    {"state_code": "ny", "state_name": "New York"},
+    {"state_code": "oh", "state_name": "Ohio"},
+    {"state_code": "ok", "state_name": "Oklahoma"},
+    {"state_code": "or", "state_name": "Oregon"},
+    {"state_code": "pa", "state_name": "Pennsylvania"},
+    {"state_code": "pr", "state_name": "Puerto Rico"},
+    {"state_code": "ri", "state_name": "Rhode Island"},
+    {"state_code": "sc", "state_name": "South Carolina"},
+    {"state_code": "sd", "state_name": "South Dakota"},
+    {"state_code": "tn", "state_name": "Tennessee"},
+    {"state_code": "tx", "state_name": "Texas"},
+    {"state_code": "ut", "state_name": "Utah"},
+    {"state_code": "va", "state_name": "Virginia"},
+    {"state_code": "vi", "state_name": "U.S. Virgin Islands"},
+    {"state_code": "vt", "state_name": "Vermont"},
+    {"state_code": "wa", "state_name": "Washington"},
+    {"state_code": "wi", "state_name": "Wisconsin"},
+    {"state_code": "wv", "state_name": "West Virginia"},
+    {"state_code": "wy", "state_name": "Wyoming"}
+]
+
+#change the state code for the url
+for state in state_data:
+    url = 'https://api.covidtracking.com/v1/states/' + state['state_code'] + '/daily.json'
+    state = State(state['state_name'], url)
+    state.print_data()
