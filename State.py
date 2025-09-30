@@ -15,9 +15,9 @@ class State():
         self.data = response.json()
 
         # Code for retrieving json files
-        # filename = f"data5500_mycode/hw5/json_file/{self.name}.json"
+        # filename = f"/home/ubuntu/WEB_Json_API_Covid_cases/json_file/{self.name}.json"
         # with open(filename, 'w', encoding='utf-8') as f:
-        # json.dump(self.data, f, indent=2, ensure_ascii=False)
+        #     json.dump(self.data, f, indent=2, ensure_ascii=False)
 
 # Prints data in desired format.
     def print_data(self):
