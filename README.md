@@ -1,2 +1,2 @@
-# Web-Json-API-Covid-cases
+# Web JSON API Covid cases
 This project takes online Covid-19 data on each state in the United States of America, as well as its teritories and the District of Columbia. The bulk of the code is in a state class that accesses the API and prints out aspects of the data to the terminal. The main file provides the Names and API URLs for each state and calls the function to print each state's information. Included in the State class is commented code that can be used for extracting the data into JSON files.
